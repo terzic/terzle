@@ -1,6 +1,6 @@
-# Word Mastermind
+# Terzle
 
-This game is a clone of [Wordle](https://www.powerlanguage.co.uk/wordle/).
+This game is a clone of [Wordle](https://www.powerlanguage.co.uk/wordle/), forked from [Word Mastermind](https://github.com/clupasq/word-mastermind)
 It's like the [MasterMind game](https://en.wikipedia.org/wiki/Mastermind_(board_game)), but instead of colors you have to guess words.
 
 ## Why?
@@ -52,21 +52,21 @@ You can either pull the latest docker image from the Github Repository, or build
 To pull the image:
 
 ```
-docker pull ghcr.io/clupasq/word-mastermind:latest
+docker pull ghcr.io/terzic/terzle:latest
 ```
 
 To build the image:
 
 ```
-cd word-mastermind
-docker build -t word-mastermind .
+cd terzle
+docker build -t terzle .
 cd ..
 ```
 
 Once the image is available, you can start a container:
 
 ```
-docker run --rm -p "3333:80" word-mastermind
+docker run --rm -p "3333:80" terzle
 ```
 
 Then, go to http://localhost:3333.
@@ -76,7 +76,7 @@ Then, go to http://localhost:3333.
 
 Make sure you have Node.JS 16 and yarn installed.
 
-In the `word-mastermind` directory, install the dependencies using `yarn install`.
+In the `terzle` directory, install the dependencies using `yarn install`.
 
 Run the server: `yarn start`.
 
