@@ -37,8 +37,8 @@ To make it easy, the keyboard at the bottom of the screen will highlight the sta
 Clone this repo:
 
 ```
-git clone https://github.com/clupasq/word-mastermind.git
-cd word-mastermind
+git clone https://github.com/terzic/terzle.git
+cd terzle
 ```
 
 There are two options for runnning the program: with Node.JS or in Docker.
