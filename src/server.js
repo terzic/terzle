@@ -50,7 +50,7 @@ fastify.post("/game/submit", (req, res) => {
 const start = async () => {
     try {
         dictionaries = await Dictionary.getAllAvailableDictionaries()
-        defaultDictionary = dictionaries.get("en-us-5")
+        defaultDictionary = dictionaries.get("en-custom")
         console.log("Current dictionaries: " + [...dictionaries.keys()])
 
         const port = process.env.PORT || 3333
