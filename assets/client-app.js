@@ -239,6 +239,10 @@ const app = new Vue({
             await this.handleNewLetter(e.key.toUpperCase());
         });
 
+        document.addEventListener("dblclick", (e) => {
+            e.preventDefault();
+        });
+        
         if (isDarkModePreferred()) {
             this.toggleDarkMode();
         }
