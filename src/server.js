@@ -9,7 +9,7 @@ let dictionaries;
 let defaultDictionary;
 
 const gameOptions = {
-    totalAttempts: Number(process.env.TOTAL_ATTEMPTS) || 7
+    totalAttempts: Number(process.env.TOTAL_ATTEMPTS) || 6
 };
 
 const gamesById = new Map();
@@ -50,7 +50,7 @@ fastify.post("/game/submit", (req, res) => {
 const start = async () => {
     try {
         dictionaries = await Dictionary.getAllAvailableDictionaries()
-        defaultDictionary = dictionaries.get("en-custom")
+        defaultDictionary = dictionaries.get("en-terzle")
         console.log("Current dictionaries: " + [...dictionaries.keys()])
 
         const port = process.env.PORT || 3333

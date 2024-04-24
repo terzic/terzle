@@ -60,6 +60,7 @@ const app = new Vue({
                 board: [],
                 wrongKeys: new Set(),
                 rightKeys: new Set(),
+                presentKeys: new Set(),
                 finished: false,
                 won: false,
                 revealedWord: undefined
@@ -175,7 +176,7 @@ const app = new Vue({
                         this.gameState.rightKeys.add(tile.letter);
                     } else if (tileResult === "1") {
                         tile.result = "present";
-                        this.gameState.rightKeys.add(tile.letter);
+                        this.gameState.presentKeys.add(tile.letter);
                     } else {
                         this.gameState.wrongKeys.add(tile.letter);
                     }
@@ -213,6 +214,7 @@ const app = new Vue({
                 key: true,
                 right: this.gameState && this.gameState.rightKeys.has(key),
                 wrong: this.gameState && this.gameState.wrongKeys.has(key),
+                present: this.gameState && this.gameState.presentKeys.has(key)
             };
         },
 
