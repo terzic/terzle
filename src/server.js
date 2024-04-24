@@ -21,7 +21,8 @@ fastify.register(fastifyStatic, {
 fastify.post("/game/start", (req, res) => {
     const {dictName} = req.body
     const dictionary = dictionaries.get(dictName) || defaultDictionary;
-    const game = new Game(dictionary, gameOptions)
+    const guessDictionary = dictionaries.get("en-custom");
+    const game = new Game(dictionary, gameOptions, guessDictionary)
     const id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10)
     gamesById.set(id, game)
     return {

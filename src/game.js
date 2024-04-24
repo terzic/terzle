@@ -39,9 +39,14 @@ const computeResult = (guess, correct) => {
 
 class Game {
 
-    constructor(dictionary, options={}) {
+    constructor(dictionary, options={}, guessDictionary) {
         this.totalAttempts = options.totalAttempts || 5
         this.dictionary = dictionary
+        this.guessDictionary = dictionary
+        if (guessDictionary) {
+            this.guessDictionary = guessDictionary
+        }
+        
         if (options.word) {
             if (!dictionary.hasWord(options.word)) {
                 throw new Error(`Word not in dictionary: '${options.word}'`)
@@ -62,7 +67,7 @@ class Game {
 
     submitGuess(guess) {
         guess = guess.toUpperCase()
-        if (!this.dictionary.hasWord(guess)) {
+        if (!this.guessDictionary.hasWord(guess)) {
             return {
                 error: "Not in dictionary"
             }
