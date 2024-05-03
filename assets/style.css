@@ -107,12 +107,12 @@ body.dark .tile.correct {
     background-color: #777;
 }
 
-.btn.key.right {
-    background-color: #6aaa64;
-}
-
 .btn.key.present {
     background-color: #c9b458;
+}
+
+.btn.key.right {
+    background-color: #6aaa64;
 }
 
 body.dark .btn.key {
