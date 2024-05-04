@@ -128,6 +128,10 @@ body.dark .btn.key.right {
     background-color: #6aaa64;
 }
 
+body.dark .btn.key.present {
+    background-color: #c9b458;
+}
+
 .popup {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
